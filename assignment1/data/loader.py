@@ -289,6 +289,24 @@ class PenDigitData(DataLoader):
     def pre_training_adjustment(self, train_features, train_classes):
         return train_features, train_classes
 
+class MadelonData(DataLoader):
+    def __init__(self, path='data/madelon.data.csv', verbose=False, seed=1):
+        super().__init__(path, verbose, seed)
+
+    def _load_data(self):
+        self._data = pd.read_csv(self._path, header=None)
+
+    def class_column_name(self):
+        return '500'
+
+    def data_name(self):
+        return 'MadelonData'
+
+    def _preprocess_data(self):
+        pass
+
+    def pre_training_adjustment(self, train_features, train_classes):
+        return train_features, train_classes
 
 class AbaloneData(DataLoader):
     def __init__(self, path='data/abalone.data', verbose=False, seed=1):
