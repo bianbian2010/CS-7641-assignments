@@ -55,6 +55,11 @@ if __name__ == '__main__':
             'name': 'pen_digits',
             'readable_name': 'Handwritten Digits',
         }
+    ds3_details = {
+            'data': loader.MadelonData(verbose=verbose, seed=seed),
+            'name': 'madelon',
+            'readable_name': 'Madelon',
+        }
 
     if verbose:
         print("----------")
@@ -63,8 +68,9 @@ if __name__ == '__main__':
     timings = {}
 
     datasets = [
-        ds1_details,
-        ds2_details
+        # ds1_details,
+        # ds2_details
+        ds3_details
     ]
 
     experiment_details = []
