@@ -60,6 +60,11 @@ if __name__ == '__main__':
             'name': 'madelon',
             'readable_name': 'Madelon',
         }
+    ds4_details = {
+            'data': loader.AdultData(verbose=verbose, seed=seed),
+            'name': 'adult',
+            'readable_name': 'Adult',
+        }
 
     if verbose:
         print("----------")
@@ -70,7 +75,8 @@ if __name__ == '__main__':
     datasets = [
         # ds1_details,
         # ds2_details
-        ds3_details
+        # ds3_details
+        ds4_details
     ]
 
     experiment_details = []
