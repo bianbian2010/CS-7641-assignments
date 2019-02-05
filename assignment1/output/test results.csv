@@ -1,3 +1,4 @@
 "2019-02-04 14:02:45.113671",DT,madelon,0.775,"{'DT__class_weight': 'balanced', 'DT__criterion': 'gini', 'DT__max_depth': 5}"
 "2019-02-04 15:14:28.240450",KNN,madelon,0.64,"{'KNN__metric': 'manhattan', 'KNN__n_neighbors': 49, 'KNN__weights': 'uniform'}"
 "2019-02-04 18:40:45.835725",ANN,madelon,0.495,"{'MLP__activation': 'relu', 'MLP__alpha': 10.0, 'MLP__hidden_layer_sizes': (1000, 1000), 'MLP__learning_rate_init': 0.032}"
+"2019-02-05 14:20:37.300418",DT,adult,0.7916094898301467,"{'DT__class_weight': 'balanced', 'DT__criterion': 'entropy', 'DT__max_depth': 13}"
