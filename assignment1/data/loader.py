@@ -320,13 +320,21 @@ class AdultData(DataLoader):
         return 'AdultData'
 
     def class_column_name(self):
-        return '107'
+        return 'target'
 
     def _preprocess_data(self):
-        # https://www.ritchieng.com/machinelearning-one-hot-encoding/
-        to_encode = [1,3,5,6,7,8,9,13,14]
         label_encoder = preprocessing.LabelEncoder()
         one_hot = preprocessing.OneHotEncoder()
+
+        # Separate out the target feature before one-hot encoding
+        # so that we can concat it as the last column
+        # since the code expects target feature in the last column
+        target = self._data[[14]]
+        target.columns = ['target']
+        self._data = self._data.drop([14], axis = 1)
+
+        # https://www.ritchieng.com/machinelearning-one-hot-encoding/
+        to_encode = [1,3,5,6,7,8,9,13]
 
         df = self._data[to_encode]
         df = df.apply(label_encoder.fit_transform)
@@ -334,8 +342,13 @@ class AdultData(DataLoader):
         # https://gist.github.com/ramhiser/982ce339d5f8c9a769a0
         vec_data = pd.DataFrame(one_hot.fit_transform(df[to_encode]).toarray())
 
+        # Also label encode the target variable
+        target['target'] = label_encoder.fit_transform(target['target'])
+
         self._data = self._data.drop(to_encode, axis=1)
-        self._data = pd.concat([self._data, vec_data], axis=1)
+        self._data = pd.concat([self._data, vec_data, target], axis=1)
+        print(self._data.shape)
+        print(self._data.head(3))
 
     def pre_training_adjustment(self, train_features, train_classes):
         return train_features, train_classes
