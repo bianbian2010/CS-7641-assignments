@@ -4,3 +4,4 @@
 "2019-02-05 14:20:37.300418",DT,adult,0.7916094898301467,"{'DT__class_weight': 'balanced', 'DT__criterion': 'entropy', 'DT__max_depth': 13}"
 "2019-02-05 14:24:23.075832",KNN,adult,0.7446558716799315,"{'KNN__metric': 'manhattan', 'KNN__n_neighbors': 13, 'KNN__weights': 'uniform'}"
 "2019-02-05 14:34:37.050927",Boost,adult,0.806570762052877,"{'Boost__base_estimator__max_depth': 6, 'Boost__learning_rate': 0.04, 'Boost__n_estimators': 100}"
+"2019-02-05 15:26:05.116946",ANN,adult,0.774067636385814,"{'MLP__activation': 'logistic', 'MLP__alpha': 0.00031622776601683794, 'MLP__hidden_layer_sizes': (53, 53, 53), 'MLP__learning_rate_init': 0.016}"
