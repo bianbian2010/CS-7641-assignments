@@ -7,3 +7,4 @@
 "2019-02-05 15:26:05.116946",ANN,adult,0.774067636385814,"{'MLP__activation': 'logistic', 'MLP__alpha': 0.00031622776601683794, 'MLP__hidden_layer_sizes': (53, 53, 53), 'MLP__learning_rate_init': 0.016}"
 "2019-02-05 15:36:44.481031",SVMLinear,adult,0.812162656664532,"{'SVM__C': 1.251, 'SVM__class_weight': 'balanced', 'SVM__max_iter': 296, 'SVM__tol': 0.03000001}"
 "2019-02-05 16:47:25.936417",SVM_RBF,adult,0.7944645198670447,"{'SVM__C': 1.501, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.009433962264150943, 'SVM__max_iter': -1, 'SVM__tol': 0.06000001}"
+"2019-02-06 09:43:54.454526",DT,madelonWithFeatureSelection,0.8125,"{'DT__class_weight': 'balanced', 'DT__criterion': 'gini', 'DT__max_depth': 11}"

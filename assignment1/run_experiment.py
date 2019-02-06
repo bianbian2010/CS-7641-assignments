@@ -57,8 +57,8 @@ if __name__ == '__main__':
         }
     ds3_details = {
             'data': loader.MadelonData(verbose=verbose, seed=seed),
-            'name': 'madelon',
-            'readable_name': 'Madelon',
+            'name': 'madelonWithFeatureSelection',
+            'readable_name': 'MadelonWithFeatureSelection',
         }
     ds4_details = {
             'data': loader.AdultData(verbose=verbose, seed=seed),
@@ -75,8 +75,8 @@ if __name__ == '__main__':
     datasets = [
         # ds1_details,
         # ds2_details
-        # ds3_details
-        ds4_details
+        ds3_details
+        # ds4_details
     ]
 
     experiment_details = []
