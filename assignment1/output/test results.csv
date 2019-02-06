@@ -8,3 +8,4 @@
 "2019-02-05 15:36:44.481031",SVMLinear,adult,0.812162656664532,"{'SVM__C': 1.251, 'SVM__class_weight': 'balanced', 'SVM__max_iter': 296, 'SVM__tol': 0.03000001}"
 "2019-02-05 16:47:25.936417",SVM_RBF,adult,0.7944645198670447,"{'SVM__C': 1.501, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.009433962264150943, 'SVM__max_iter': -1, 'SVM__tol': 0.06000001}"
 "2019-02-06 09:43:54.454526",DT,madelonWithFeatureSelection,0.8125,"{'DT__class_weight': 'balanced', 'DT__criterion': 'gini', 'DT__max_depth': 11}"
+"2019-02-06 09:47:28.962274",KNN,madelonWithFeatureSelection,0.825,"{'KNN__metric': 'manhattan', 'KNN__n_neighbors': 13, 'KNN__weights': 'uniform'}"
