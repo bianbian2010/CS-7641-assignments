@@ -271,10 +271,10 @@ def perform_experiment(ds, ds_name, ds_readable_name, clf, clf_name, clf_label, 
     ds_training_x, ds_training_y = ds.pre_training_adjustment(ds_training_x, ds_training_y)
 
     pipe = Pipeline([('Scale', StandardScaler()),
-                    ('Cull1',SelectFromModel(RandomForestClassifier(random_state=1),threshold='median')),
-                    ('Cull2',SelectFromModel(RandomForestClassifier(random_state=2),threshold='median')),
-                    ('Cull3',SelectFromModel(RandomForestClassifier(random_state=3),threshold='median')),
-                    ('Cull4',SelectFromModel(RandomForestClassifier(random_state=4),threshold='median')),
+                    # ('Cull1',SelectFromModel(RandomForestClassifier(random_state=1),threshold='median')),
+                    # ('Cull2',SelectFromModel(RandomForestClassifier(random_state=2),threshold='median')),
+                    # ('Cull3',SelectFromModel(RandomForestClassifier(random_state=3),threshold='median')),
+                    # ('Cull4',SelectFromModel(RandomForestClassifier(random_state=4),threshold='median')),
                     (clf_label, clf)])
     ds_final_params = None
     if not iteration_lc_only:
