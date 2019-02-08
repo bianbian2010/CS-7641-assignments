@@ -12,5 +12,3 @@
 "2019-02-06 16:25:56.941351",ANN,madelonWithFeatureSelection,0.7275,"{'MLP__activation': 'relu', 'MLP__alpha': 0.1, 'MLP__hidden_layer_sizes': (1000, 1000, 1000), 'MLP__learning_rate_init': 0.016}"
 "2019-02-06 18:13:34.208426",SVMLinear,madelonWithFeatureSelection,0.57,"{'SVM__C': 0.001, 'SVM__class_weight': 'balanced', 'SVM__max_iter': 626, 'SVM__tol': 0.08000001}"
 "2019-02-06 18:40:58.805242",SVM_RBF,madelonWithFeatureSelection,0.8325,"{'SVM__C': 1.251, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.202, 'SVM__max_iter': -1, 'SVM__tol': 0.01000001}"
-"2019-02-06 21:21:11.923007",SVMLinear,madelonWithFeatureSelection,0.5575,"{'SVM__C': 0.001, 'SVM__class_weight': 'balanced', 'SVM__max_iter': 626, 'SVM__tol': 1e-08}"
-"2019-02-06 23:41:57.378783",SVM_RBF,madelonWithFeatureSelection,0.6175,"{'SVM__C': 0.501, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.002, 'SVM__max_iter': -1, 'SVM__tol': 0.01000001}"
