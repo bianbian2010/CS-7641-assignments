@@ -17,18 +17,22 @@ class BoostingExperiment(experiments.BaseExperiment):
         max_depths = np.arange(1, 11, 1)
 
         # NOTE: Criterion may need to be adjusted here depending on the dataset
-        base = learners.DTLearner(criterion='entropy', class_weight='balanced', max_depth=10,
+        base = learners.DTLearner(criterion='gini', class_weight='balanced',
                                   random_state=self._details.seed)
-        of_base = learners.DTLearner(criterion='entropy', class_weight='balanced', random_state=self._details.seed)
+        of_base = learners.DTLearner(criterion='gini', class_weight='balanced', random_state=self._details.seed)
 
         booster = learners.BoostingLearner(algorithm='SAMME', learning_rate=1, base_estimator=base,
                                            random_state=self._details.seed)
         of_booster = learners.BoostingLearner(algorithm='SAMME', learning_rate=1, base_estimator=of_base,
                                               random_state=self._details.seed)
 
-        params = {'Boost__n_estimators': [1, 2, 5, 10, 20, 30, 45, 60, 80, 90, 100],
-                  'Boost__learning_rate': [(2**x)/100 for x in range(7)]+[1],
-                  'Boost__base_estimator__max_depth': max_depths}
+        alphas = [-1,-1e-3,-(1e-3)*10**-0.5, -1e-2, -(1e-2)*10**-0.5,-1e-1,-(1e-1)*10**-0.5, 0, (1e-1)*10**-0.5,1e-1,(1e-2)*10**-0.5,1e-2,(1e-3)*10**-0.5,1e-3]
+
+        params = {'Boost__n_estimators':[1,2,5,10,20,30,45,60,80,100],
+                'Boost__base_estimator__alpha':alphas}
+        # params = {'Boost__n_estimators': [1, 2, 5, 10, 20, 30, 45, 60, 80, 90, 100],
+        #           'Boost__learning_rate': [(2**x)/100 for x in range(7)]+[1],
+        #           'Boost__base_estimator__max_depth': max_depths}
         iteration_details = {
             'params': {'Boost__n_estimators': [1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}
         }
@@ -56,8 +60,8 @@ class BoostingExperiment(experiments.BaseExperiment):
                                        seed=self._details.seed, threads=self._details.threads, verbose=self._verbose)
 
         # TODO: This should turn OFF regularization
-        experiments.perform_experiment(self._details.ds, self._details.ds_name, self._details.ds_readable_name,
-                                       of_booster, 'Boost_OF', 'Boost', of_params, seed=self._details.seed,
-                                       iteration_details=iteration_details,
-                                       best_params=best_params, threads=self._details.threads,
-                                       verbose=self._verbose, iteration_lc_only=True)
+        # experiments.perform_experiment(self._details.ds, self._details.ds_name, self._details.ds_readable_name,
+        #                                of_booster, 'Boost_OF', 'Boost', of_params, seed=self._details.seed,
+        #                                iteration_details=iteration_details,
+        #                                best_params=best_params, threads=self._details.threads,
+        #                                verbose=self._verbose, iteration_lc_only=True)

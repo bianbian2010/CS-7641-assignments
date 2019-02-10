@@ -14,3 +14,7 @@
 "2019-02-06 18:40:58.805242",SVM_RBF,madelonWithFeatureSelection,0.8325,"{'SVM__C': 1.251, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.202, 'SVM__max_iter': -1, 'SVM__tol': 0.01000001}"
 "2019-02-08 10:01:43.725316",SVMLinear,madelon,0.5575,"{'SVM__C': 0.001, 'SVM__class_weight': 'balanced', 'SVM__max_iter': 626, 'SVM__tol': 1e-08}"
 "2019-02-08 12:23:50.719148",SVM_RBF,madelon,0.6175,"{'SVM__C': 0.501, 'SVM__class_weight': 'balanced', 'SVM__decision_function_shape': 'ovo', 'SVM__gamma': 0.002, 'SVM__max_iter': -1, 'SVM__tol': 0.01000001}"
+"2019-02-09 17:11:44.954288",Boost,madelon,0.7725,"{'Boost__base_estimator__alpha': 0.01, 'Boost__n_estimators': 1}"
+"2019-02-09 17:23:09.406325",Boost,madelon,0.775,"{'Boost__base_estimator__alpha': 0, 'Boost__n_estimators': 1}"
+"2019-02-09 17:55:51.260027",Boost,madelonWithFeatureSelection,0.775,"{'Boost__base_estimator__alpha': 0, 'Boost__n_estimators': 1}"
+"2019-02-09 21:34:17.102659",Boost,madelonWithFeatureSelection,0.7475,"{'Boost__base_estimator__alpha': 0.01, 'Boost__n_estimators': 1}"

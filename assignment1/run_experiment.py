@@ -57,8 +57,8 @@ if __name__ == '__main__':
         }
     ds3_details = {
             'data': loader.MadelonData(verbose=verbose, seed=seed),
-            'name': 'madelon',
-            'readable_name': 'Madelon',
+            'name': 'madelonWithFeatureSelection',
+            'readable_name': 'MadelonWithFeatureSelection',
         }
     ds4_details = {
             'data': loader.AdultData(verbose=verbose, seed=seed),
