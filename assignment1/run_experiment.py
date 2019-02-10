@@ -45,22 +45,12 @@ if __name__ == '__main__':
     print("Loading data")
     print("----------")
 
-    ds1_details = {
-            'data': loader.CreditDefaultData(verbose=verbose, seed=seed),
-            'name': 'credit_default',
-            'readable_name': 'Credit Default',
-        }
-    ds2_details = {
-            'data': loader.PenDigitData(verbose=verbose, seed=seed),
-            'name': 'pen_digits',
-            'readable_name': 'Handwritten Digits',
-        }
-    ds3_details = {
+    madelon_details = {
             'data': loader.MadelonData(verbose=verbose, seed=seed),
-            'name': 'madelonWithFeatureSelection',
-            'readable_name': 'MadelonWithFeatureSelection',
+            'name': 'madelon',
+            'readable_name': 'Madelon',
         }
-    ds4_details = {
+    adult_details = {
             'data': loader.AdultData(verbose=verbose, seed=seed),
             'name': 'adult',
             'readable_name': 'Adult',
@@ -73,10 +63,8 @@ if __name__ == '__main__':
     timings = {}
 
     datasets = [
-        # ds1_details,
-        # ds2_details
-        ds3_details
-        # ds4_details
+        madelon_details
+        adult_details
     ]
 
     experiment_details = []

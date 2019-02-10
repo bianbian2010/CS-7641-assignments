@@ -300,7 +300,7 @@ class MadelonData(DataLoader):
         return '500'
 
     def data_name(self):
-        return 'MadelonDataWithFeatureSelection'
+        return 'MadelonData'
 
     def _preprocess_data(self):
         pass

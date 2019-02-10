@@ -13,6 +13,7 @@ If a python virtual environment has been setup for the project, a simple `pip in
 
 Each assignment folder has its own `run_experiment.py` that will do most of the work for you.
 Running `python run_experiment.py -h` should provide a list of options for what you can do.
+Each assignment folder also has its own readme with anything specific to note for that assignment.
 
 For the most part it is simple to run a given set of experiments based on a specific algorithm. One flag to consider always including is `--threads` with a value of `-1`. This will speed up execution in some cases but also might use all available cores.
 
