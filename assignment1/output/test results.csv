@@ -17,4 +17,4 @@
 "2019-02-09 17:11:44.954288",Boost,madelon,0.7725,"{'Boost__base_estimator__alpha': 0.01, 'Boost__n_estimators': 1}"
 "2019-02-09 17:23:09.406325",Boost,madelon,0.775,"{'Boost__base_estimator__alpha': 0, 'Boost__n_estimators': 1}"
 "2019-02-09 17:55:51.260027",Boost,madelonWithFeatureSelection,0.775,"{'Boost__base_estimator__alpha': 0, 'Boost__n_estimators': 1}"
-"2019-02-09 21:34:17.102659",Boost,madelonWithFeatureSelection,0.7475,"{'Boost__base_estimator__alpha': 0.01, 'Boost__n_estimators': 1}"
+"2019-02-10 01:11:06.702816",Boost,madelonWithFeatureSelection,0.7825,"{'Boost__base_estimator__alpha': 0.01, 'Boost__n_estimators': 20}"
