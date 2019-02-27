@@ -27,7 +27,7 @@ If these folders do not exist the experiments module will attempt to create them
 
 ## Running Experiments
 
-Each experiment can be run as a separate script. Running the actual optimization algorithms to generate data requires the use of Jython. A standalone instance of Jython has been added in the assignment2 folder (Please ensure that Java is installed on the machine prior to proceeding). This can be used on a Windows machine by navigating to the assignment2 folder on the command line and executing the following command:
+Each experiment can be run as a separate script. Running the actual optimization algorithms to generate data requires the use of Jython. A standalone instance of Jython has been added in the `assignment2` folder (Please ensure that Java is installed on the machine prior to proceeding). This can be used on a Windows machine by navigating to the `assignment2` folder on the command line and executing the following command:
 
 ```
 java -jar .\jython2.7.0\jython.jar <python file.py>
