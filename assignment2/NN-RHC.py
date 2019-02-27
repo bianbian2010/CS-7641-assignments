@@ -4,7 +4,7 @@ RHC NN training on HTRU2 data
 # Adapted from https://github.com/JonathanTay/CS-7641-assignment-2/blob/master/NN1.py
 import sys
 
-sys.path.append("./ABAGAIL.jar")
+sys.path.append("./ABAGAIL/ABAGAIL.jar")
 from func.nn.backprop import BackPropagationNetworkFactory
 from shared import SumOfSquaresError, DataSet, Instance
 from opt.example import NeuralNetworkOptimizationProblem
@@ -14,11 +14,12 @@ from func.nn.activation import RELU
 from base import *
 
 # Network parameters found "optimal" in Assignment 1
-INPUT_LAYER = 8
-HIDDEN_LAYER1 = 16
-HIDDEN_LAYER2 = 16
+INPUT_LAYER = 106
+HIDDEN_LAYER1 = 53
+HIDDEN_LAYER2 = 53
+HIDDEN_LAYER3 = 53
 OUTPUT_LAYER = 1
-TRAINING_ITERATIONS = 5001
+TRAINING_ITERATIONS = 3000
 OUTFILE = OUTPUT_DIRECTORY + '/NN_OUTPUT/NN_{}_LOG.csv'
 
 
@@ -35,7 +36,7 @@ def main():
     rule = RPROPUpdateRule(0.064, 50, 0.000001)
     oa_names = ["RHC"]
     classification_network = factory.createClassificationNetwork(
-        [INPUT_LAYER, HIDDEN_LAYER1, HIDDEN_LAYER2, OUTPUT_LAYER], relu)
+        [INPUT_LAYER, HIDDEN_LAYER1, HIDDEN_LAYER2, HIDDEN_LAYER3, OUTPUT_LAYER], relu)
     nnop = NeuralNetworkOptimizationProblem(data_set, classification_network, measure)
     oa = RandomizedHillClimbing(nnop)
     train(oa, classification_network, 'RHC', training_ints, validation_ints, testing_ints, measure,
