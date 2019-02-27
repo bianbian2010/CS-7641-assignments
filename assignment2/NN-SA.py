@@ -12,6 +12,7 @@ from func.nn.backprop import RPROPUpdateRule
 import opt.SimulatedAnnealing as SimulatedAnnealing
 from func.nn.activation import RELU
 from base import *
+from datetime import datetime
 
 # Network parameters found "optimal" in Assignment 1
 INPUT_LAYER = 106
@@ -48,5 +49,12 @@ def main(CE):
 
 
 if __name__ == "__main__":
+    t = datetime.now()
+
     for CE in [0.15, 0.35, 0.55, 0.70, 0.95]:
         main(CE)
+
+    t_d = datetime.now() - t
+    timings = {}
+    timings['NN-SA'] = t_d.seconds
+    print(timings)

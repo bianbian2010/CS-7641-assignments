@@ -12,6 +12,7 @@ from func.nn.backprop import RPROPUpdateRule
 import opt.ga.StandardGeneticAlgorithm as StandardGeneticAlgorithm
 from func.nn.activation import RELU
 from base import *
+from datetime import datetime
 
 # Network parameters found "optimal" in Assignment 1
 INPUT_LAYER = 106
@@ -48,8 +49,15 @@ def main(P, mate, mutate):
 
 
 if __name__ == "__main__":
+    t = datetime.now()
+
     for p in [50]:
         for mate in [20, 10]:
             for mutate in [20, 10]:
                 args = (p, mate, mutate)
                 main(*args)
+
+    t_d = datetime.now() - t
+    timings = {}
+    timings['NN-SA'] = t_d.seconds
+    print(timings)

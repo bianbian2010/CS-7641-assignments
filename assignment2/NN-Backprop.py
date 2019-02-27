@@ -11,6 +11,7 @@ from shared import SumOfSquaresError, DataSet, Instance
 from func.nn.backprop import RPROPUpdateRule, BatchBackPropagationTrainer
 from func.nn.activation import RELU
 from base import *
+from datetime import datetime
 
 # Network parameters found "optimal" in Assignment 1
 INPUT_LAYER = 106
@@ -42,8 +43,15 @@ def main():
 
 
 if __name__ == "__main__":
+    t = datetime.now()
+
     with open(OUTFILE.format('Backprop'), 'a+') as f:
         f.write('{},{},{},{},{},{},{},{},{},{},{}\n'.format('iteration', 'MSE_trg', 'MSE_val', 'MSE_tst', 'acc_trg',
                                                             'acc_val', 'acc_tst', 'f1_trg', 'f1_val', 'f1_tst',
                                                             'elapsed'))
     main()
+
+    t_d = datetime.now() - t
+    timings = {}
+    timings['NN-SA'] = t_d.seconds
+    print(timings)
