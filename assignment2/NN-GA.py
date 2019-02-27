@@ -59,5 +59,5 @@ if __name__ == "__main__":
 
     t_d = datetime.now() - t
     timings = {}
-    timings['NN-SA'] = t_d.seconds
+    timings['NN-GA'] = t_d.seconds
     print(timings)
