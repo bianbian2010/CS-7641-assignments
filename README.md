@@ -4,6 +4,7 @@ This repo is full of code for [CS 7641 - Machine Learning](https://www.omscs.gat
 
 This repo has been originally forked from Chad's repo ([https://github.com/cmaron/CS-7641-assignments](https://github.com/cmaron/CS-7641-assignments)).
 A huge thanks to cmaron and jontay for sharing their code. Much of the code contained in this repo is based off of their work.
+Extended thanks to Pushkar for sharing his ABAGAIL codebase ([https://github.com/pushkar/ABAGAIL](https://github.com/pushkar/ABAGAIL)) that was used for building assignment 2.
 
 ## How do I use this?
 
