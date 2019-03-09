@@ -25,6 +25,17 @@ Output CSVs and images are written to `./output` and `./output/images` respectiv
 
 If these folders do not exist the experiments module will attempt to create them.
 
+## Necessary edits for the Neural Network Problem
+
+In order to get the `NN-*` scripts to run you must edit each and make sure these values make sense for your data set:
+```
+INPUT_LAYER = 8
+HIDDEN_LAYER1 = 16
+HIDDEN_LAYER2 = 16
+OUTPUT_LAYER = 1
+```
+In this case, there are 8 features and it is a binary classification problem and as a result `INPUT_LAYER` is `8` and `OUTPUT_LAYER` is `1`. If you had, say, 20 features you would set `INPUT_LAYER` to 20.
+
 ## Running Experiments
 
 Each experiment can be run as a separate script. Running the actual optimization algorithms to generate data requires the use of Jython. A standalone instance of Jython has been added in the `assignment2` folder (Please ensure that Java is installed on the machine prior to proceeding). This can be used on a Windows machine by navigating to the `assignment2` folder on the command line and executing the following command:
