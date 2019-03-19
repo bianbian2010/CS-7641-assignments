@@ -14,7 +14,11 @@ from data import loader
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
+fh = logging.FileHandler("runtimes.log")
+fh.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+logger.addHandler(fh)
 
 def run_experiment(experiment_details, experiment, timing_key, dim, skiprerun, verbose, timings):
     t = datetime.now()
