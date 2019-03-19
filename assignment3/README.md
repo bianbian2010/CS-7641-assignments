@@ -21,7 +21,7 @@ If these folders do not exist the experiments module will attempt to create them
 
 ## Clustering Experiments
 
-The experiments will output modified versions of the data sets after applying the DR methods. The script `run_clustering.sh` can be used to perform clustering on these modified datasets, using a specific number of components for the DR method.
+The experiments will output modified versions of the data sets after applying the DR methods. The script `run_clustering.ps1` can be used to perform clustering on these modified datasets, using a specific number of components for the DR method.
 
 **BE SURE TO UPDATE THE VALUES IN THIS SCRIPT FOR YOUR DATASETS**. 
 
