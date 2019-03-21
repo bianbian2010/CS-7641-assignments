@@ -325,7 +325,7 @@ def plot_combined(title, df, data_columns, tsne_data=None, extra_data=None, extr
     if extra_data is not None and extra_data_name is not None:
         ex_ax = ax1.twinx()
         ex_ax.plot(extra_data.index.values, extra_data.iloc[:, 0], linewidth=1,
-                   label=extra_data_name)
+                   label=extra_data_name, color='red')
         ex_ax.set_ylabel(extra_data_name)
         ex_ax.tick_params('y')
 
