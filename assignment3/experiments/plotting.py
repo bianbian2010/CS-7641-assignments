@@ -429,6 +429,7 @@ def plot_sil_samples(title, df, n_clusters):
     # ax.set_title("The silhouette plot for the various clusters.")
     ax.set_xlabel("Silhouette coefficient values")
     ax.set_ylabel("Cluster label")
+    ax.vlines(0, 0, y_upper, linestyle='dashed', color='red')
 
     # TODO: Get this to work?
     # # The vertical line for average silhouette score of all the values
