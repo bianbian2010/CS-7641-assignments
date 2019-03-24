@@ -1,0 +1,65 @@
+2019-03-24 01:15:37,940 - __main__ - INFO - Loading data
+2019-03-24 01:15:37,940 - __main__ - INFO - ----------
+2019-03-24 01:15:38,178 - __main__ - INFO - Running experiments
+2019-03-24 01:15:38,178 - __main__ - INFO - Running ICA experiment: Adult (None)
+2019-03-24 01:15:38,179 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002389F4C1630>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 01:16:43,818 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:16:43,818 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002389F4C1630>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 01:27:53,060 - __main__ - INFO - Timings: {'ICA': 65, 'PCA': 669}
+2019-03-24 01:38:03,380 - __main__ - INFO - Loading data
+2019-03-24 01:38:03,380 - __main__ - INFO - ----------
+2019-03-24 01:38:03,646 - __main__ - INFO - Running experiments
+2019-03-24 01:38:03,647 - __main__ - INFO - Running ICA experiment: Madelon (None)
+2019-03-24 01:38:03,647 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x000001EEE1BEF6D8>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 01:43:29,355 - __main__ - INFO - Running PCA experiment: Madelon (None)
+2019-03-24 01:43:29,355 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x000001EEE1BEF6D8>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 03:18:35,474 - __main__ - INFO - Timings: {'ICA': 325, 'PCA': 5706}
+2019-03-24 03:35:21,475 - __main__ - INFO - Loading data
+2019-03-24 03:35:21,476 - __main__ - INFO - ----------
+2019-03-24 03:35:21,793 - __main__ - INFO - Running experiments
+2019-03-24 03:35:21,794 - __main__ - INFO - Running RF experiment: Adult (None)
+2019-03-24 03:35:21,794 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002244A2A9FD0>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 03:40:27,790 - __main__ - INFO - Running RP experiment: Adult (None)
+2019-03-24 03:40:27,790 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002244A2A9FD0>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 03:45:39,385 - __main__ - INFO - Timings: {'RF': 305, 'RP': 311}
+2019-03-24 04:21:49,820 - __main__ - INFO - Loading data
+2019-03-24 04:21:49,820 - __main__ - INFO - ----------
+2019-03-24 04:21:50,109 - __main__ - INFO - Running experiments
+2019-03-24 04:21:50,110 - __main__ - INFO - Running RF experiment: Madelon (None)
+2019-03-24 04:21:50,111 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x000002011E6106A0>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 04:28:12,215 - __main__ - INFO - Running RP experiment: Madelon (None)
+2019-03-24 04:28:12,215 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x000002011E6106A0>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 04:30:05,221 - __main__ - INFO - Timings: {'RF': 382, 'RP': 113}
+2019-03-24 08:58:08,941 - __main__ - INFO - Loading data
+2019-03-24 08:58:08,941 - __main__ - INFO - ----------
+2019-03-24 08:58:09,468 - __main__ - INFO - Plotting results
+2019-03-24 09:04:45,472 - __main__ - INFO - Loading data
+2019-03-24 09:04:45,472 - __main__ - INFO - ----------
+2019-03-24 09:04:45,703 - __main__ - INFO - Running experiments
+2019-03-24 09:04:45,703 - __main__ - INFO - Running ICA experiment: Adult (None)
+2019-03-24 09:04:45,704 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x00000205AC6BF710>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 09:09:55,262 - __main__ - INFO - Timings: {'ICA': 309}
+2019-03-24 09:11:44,733 - __main__ - INFO - Loading data
+2019-03-24 09:11:44,733 - __main__ - INFO - ----------
+2019-03-24 09:11:45,221 - __main__ - INFO - Plotting results
+2019-03-24 09:12:24,272 - __main__ - INFO - Loading data
+2019-03-24 09:12:24,272 - __main__ - INFO - ----------
+2019-03-24 09:12:24,559 - __main__ - INFO - Running experiments
+2019-03-24 09:12:24,559 - __main__ - INFO - Running ICA experiment: Madelon (None)
+2019-03-24 09:12:24,559 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x0000015CE44A0710>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 09:26:53,001 - __main__ - INFO - Timings: {'ICA': 868}
+2019-03-24 09:30:16,864 - __main__ - INFO - Loading data
+2019-03-24 09:30:16,864 - __main__ - INFO - ----------
+2019-03-24 09:30:17,076 - __main__ - INFO - Running experiments
+2019-03-24 09:30:17,077 - __main__ - INFO - Running Benchmark experiment: Adult (None)
+2019-03-24 09:30:17,077 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x0000017D18DC26D8>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 09:53:51,004 - __main__ - INFO - Timings: {'Benchmark': 1413}
+2019-03-24 09:54:39,150 - __main__ - INFO - Loading data
+2019-03-24 09:54:39,150 - __main__ - INFO - ----------
+2019-03-24 09:54:39,441 - __main__ - INFO - Running experiments
+2019-03-24 09:54:39,441 - __main__ - INFO - Running Benchmark experiment: Madelon (None)
+2019-03-24 09:54:39,441 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x00000189FB7306D8>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
+2019-03-24 10:24:23,120 - __main__ - INFO - Timings: {'Benchmark': 1783}
+2019-03-24 10:40:43,906 - __main__ - INFO - Loading data
+2019-03-24 10:40:43,906 - __main__ - INFO - ----------
+2019-03-24 10:40:44,472 - __main__ - INFO - Plotting results
