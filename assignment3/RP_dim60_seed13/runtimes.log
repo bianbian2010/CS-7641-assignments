@@ -12,3 +12,6 @@
 2019-03-24 11:56:45,687 - __main__ - INFO - Running with dimension 60
 2019-03-24 11:56:45,687 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x0000022758E31898>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=13)
 2019-03-24 12:00:23,651 - __main__ - INFO - Timings: {'RP': 217}
+2019-03-24 12:07:51,026 - __main__ - INFO - Loading data
+2019-03-24 12:07:51,026 - __main__ - INFO - ----------
+2019-03-24 12:07:51,553 - __main__ - INFO - Plotting results
