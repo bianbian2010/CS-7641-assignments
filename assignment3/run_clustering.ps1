@@ -7,8 +7,8 @@
 # python run_experiment.py --ica --dataset2 --dim 60 --skiprerun --verbose --threads -1 --seed 13 | tee ica-dataset2-clustering.log 2>&1
 # python run_experiment.py --pca --dataset1 --dim 11 --skiprerun --verbose --threads -1 --seed 13 | tee pca-dataset1-clustering.log 2>&1
 # python run_experiment.py --pca --dataset2 --dim 12 --skiprerun --verbose --threads -1 --seed 13 | tee pca-dataset2-clustering.log 2>&1
-python run_experiment.py --rp  --dataset1 --dim 60  --skiprerun --verbose --threads -1 --seed 13 | tee rp-dataset1-clustering.log  2>&1
-python run_experiment.py --rp  --dataset2 --dim 60 --skiprerun --verbose --threads -1 --seed 13 | tee rp-dataset2-clustering.log  2>&1
+python run_experiment.py --rp  --dataset1 --dim 60  --skiprerun --verbose --threads -1 --seed 14 | tee rp-dataset1-clustering.log  2>&1
+python run_experiment.py --rp  --dataset2 --dim 60 --skiprerun --verbose --threads -1 --seed 14 | tee rp-dataset2-clustering.log  2>&1
 # python run_experiment.py --rf  --dataset1 --dim 10 --skiprerun --verbose --threads -1 --seed 13 | tee rf-dataset1-clustering.log  2>&1
 # python run_experiment.py --rf  --dataset2 --dim 25 --skiprerun --verbose --threads -1 --seed 13 | tee rf-dataset2-clustering.log  2>&1
 

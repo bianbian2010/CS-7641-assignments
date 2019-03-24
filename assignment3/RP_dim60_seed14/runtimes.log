@@ -1,0 +1,17 @@
+2019-03-24 12:11:12,508 - __main__ - INFO - Loading data
+2019-03-24 12:11:12,508 - __main__ - INFO - ----------
+2019-03-24 12:11:12,794 - __main__ - INFO - ----------
+2019-03-24 12:11:12,795 - __main__ - INFO - Running experiments
+2019-03-24 12:11:12,796 - __main__ - INFO - Running with dimension 60
+2019-03-24 12:11:12,796 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x0000026AB0011780>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=14)
+2019-03-24 12:20:11,293 - __main__ - INFO - Timings: {'RP': 538}
+2019-03-24 12:20:13,672 - __main__ - INFO - Loading data
+2019-03-24 12:20:13,673 - __main__ - INFO - ----------
+2019-03-24 12:20:14,035 - __main__ - INFO - ----------
+2019-03-24 12:20:14,036 - __main__ - INFO - Running experiments
+2019-03-24 12:20:14,036 - __main__ - INFO - Running with dimension 60
+2019-03-24 12:20:14,036 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.MadelonData object at 0x00000286858F1898>, ds_name=madelon, ds_readable_name=Madelon, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [10.0], 'NN__hidden_layer_sizes': [(1000, 1000)], 'NN__learning_rate_init': [0.032]}, threads=-1, seed=14)
+2019-03-24 12:23:47,259 - __main__ - INFO - Timings: {'RP': 213}
+2019-03-24 12:34:07,423 - __main__ - INFO - Loading data
+2019-03-24 12:34:07,423 - __main__ - INFO - ----------
+2019-03-24 12:34:07,958 - __main__ - INFO - Plotting results
