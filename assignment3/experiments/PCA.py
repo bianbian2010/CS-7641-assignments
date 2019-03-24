@@ -8,6 +8,8 @@ from matplotlib import cm
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.decomposition import PCA
+from collections import defaultdict
+from itertools import product
 
 import experiments
 
@@ -34,6 +36,17 @@ class PCAExperiment(experiments.BaseExperiment):
         pca.fit(self._details.ds.training_x)
         tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0], 500) + 1))
         tmp.to_csv(self._out.format('{}_scree.csv'.format(self._details.ds_name)))
+
+        # Calculate reconstruction error
+        reconstruction_error = defaultdict(dict)
+        for i, dim in product(range(10), self._dims):
+            pca = PCA(random_state=self._details.seed, n_components=dim)
+            pca.fit(self._details.ds.training_x)
+            transformed = pca.transform(self._details.ds.training_x)
+            inversed_transformed = pca.inverse_transform(transformed)
+            reconstruction_error[dim][i] = np.nanmean(np.square(self._details.ds.training_x - inversed_transformed))
+        t = pd.DataFrame(reconstruction_error).T
+        t.to_csv(self._out.format('{}_scree2.csv'.format(self._details.ds_name)))
 
         # If the ds is small or the number of components is too large, the full solver is used for PCA and as a result
         # we need to re-create the array of dimensions. In that case we'll create a linear distribution from 2 to
