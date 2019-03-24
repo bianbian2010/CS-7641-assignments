@@ -95,8 +95,8 @@ if __name__ == '__main__':
             'data': loader.AdultData(verbose=verbose, seed=seed),
             'name': 'adult',
             'readable_name': 'Adult',
-            'best_nn_params': {'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794],
-                               'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}
+            'best_nn_params': {'activation': 'relu', 'alpha': 0.01,
+                               'hidden_layer_sizes': (100, 25, 100), 'learning_rate_init': 0.001}
         }
     dataset2_details = {
             'data': loader.MadelonData(verbose=verbose, seed=seed),

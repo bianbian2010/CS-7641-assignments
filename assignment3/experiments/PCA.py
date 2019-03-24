@@ -8,6 +8,7 @@ from matplotlib import cm
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.decomposition import PCA
+from sklearn.metrics import make_scorer, accuracy_score, f1_score, confusion_matrix
 from collections import defaultdict
 from itertools import product
 
@@ -28,44 +29,62 @@ class PCAExperiment(experiments.BaseExperiment):
         return 'PCA'
 
     def perform(self):
+        print(self._details.ds.testing_y)
         # Adapted from https://github.com/JonathanTay/CS-7641-assignment-3/blob/master/PCA.py
         self.log("Performing {}".format(self.experiment_name()))
 
         # %% Data for 1
-        pca = PCA(random_state=self._details.seed)
-        pca.fit(self._details.ds.training_x)
-        tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0], 500) + 1))
-        tmp.to_csv(self._out.format('{}_scree.csv'.format(self._details.ds_name)))
+        # pca = PCA(random_state=self._details.seed)
+        # pca.fit(self._details.ds.training_x)
+        # tmp = pd.Series(data=pca.explained_variance_, index=range(1, min(pca.explained_variance_.shape[0], 500) + 1))
+        # tmp.to_csv(self._out.format('{}_scree.csv'.format(self._details.ds_name)))
 
-        # Calculate reconstruction error
-        reconstruction_error = defaultdict(dict)
-        for i, dim in product(range(10), self._dims):
-            pca = PCA(random_state=self._details.seed, n_components=dim)
-            pca.fit(self._details.ds.training_x)
-            transformed = pca.transform(self._details.ds.training_x)
-            inversed_transformed = pca.inverse_transform(transformed)
-            reconstruction_error[dim][i] = np.nanmean(np.square(self._details.ds.training_x - inversed_transformed))
-        t = pd.DataFrame(reconstruction_error).T
-        t.to_csv(self._out.format('{}_scree2.csv'.format(self._details.ds_name)))
+        # # Calculate reconstruction error
+        # reconstruction_error = defaultdict(dict)
+        # for i, dim in product(range(10), self._dims):
+        #     pca = PCA(random_state=self._details.seed, n_components=dim)
+        #     pca.fit(self._details.ds.training_x)
+        #     transformed = pca.transform(self._details.ds.training_x)
+        #     inversed_transformed = pca.inverse_transform(transformed)
+        #     reconstruction_error[dim][i] = np.nanmean(np.square(self._details.ds.training_x - inversed_transformed))
+        # t = pd.DataFrame(reconstruction_error).T
+        # t.to_csv(self._out.format('{}_scree2.csv'.format(self._details.ds_name)))
 
-        # If the ds is small or the number of components is too large, the full solver is used for PCA and as a result
-        # we need to re-create the array of dimensions. In that case we'll create a linear distribution from 2 to
-        # ds.shape[1]
-        if (max(self._details.ds.training_x.shape) <= 500 or
-           self._details.ds.training_x.shape[1] > (0.8 * min(self._details.ds.training_x.shape))):
-            self._dims = list(set(np.linspace(2, self._details.ds.training_x.shape[1], num=len(self._dims), dtype=int)))
-            self.log("Must use full solver, new dims are {}".format(self._dims))
+        # # If the ds is small or the number of components is too large, the full solver is used for PCA and as a result
+        # # we need to re-create the array of dimensions. In that case we'll create a linear distribution from 2 to
+        # # ds.shape[1]
+        # if (max(self._details.ds.training_x.shape) <= 500 or
+        #    self._details.ds.training_x.shape[1] > (0.8 * min(self._details.ds.training_x.shape))):
+        #     self._dims = list(set(np.linspace(2, self._details.ds.training_x.shape[1], num=len(self._dims), dtype=int)))
+        #     self.log("Must use full solver, new dims are {}".format(self._dims))
 
         # %% Data for 2
         grid = {'pca__n_components': self._dims, 'NN__alpha': self._nn_reg, 'NN__hidden_layer_sizes': self._nn_arch}
         pca = PCA(random_state=self._details.seed)
         mlp = MLPClassifier(activation='relu', max_iter=2000, early_stopping=True, random_state=self._details.seed)
-        pipe = Pipeline([('pca', pca), ('NN', mlp)], memory=experiments.pipeline_memory)
-        gs, final_estimator = self.gs_with_best_estimator(pipe, grid)
-        self.log("Grid search complete")
+        mlp.set_params(**self._details.best_nn_params)
+        pipe = Pipeline([('NN', mlp)], memory=experiments.pipeline_memory)
 
-        tmp = pd.DataFrame(gs.cv_results_)
-        tmp.to_csv(self._out.format('{}_dim_red.csv'.format(self._details.ds_name)))
+        if self._details.best_nn_params:
+            print("if")
+            pipe.fit(self._details.ds.training_x, self._details.ds.training_y)
+            test_score = pipe.score(self._details.ds.testing_x, self._details.ds.testing_y)
+            test_y_predicted = pipe.predict(self._details.ds.testing_x)
+            cnf_matrix = confusion_matrix(self._details.ds.testing_y, test_y_predicted)
+            np.set_printoptions(precision=2)
+            print(cnf_matrix)
+            # plt = plot_confusion_matrix(cnf_matrix, classes,
+            #                             title='Confusion Matrix: {} - {}'.format(clf_type, dataset_readable_name))
+            # plt.savefig('{}/images/{}_{}_CM.png'.format(OUTPUT_DIRECTORY, clf_type, dataset), format='png', dpi=150,
+            #             bbox_inches='tight')
+        else:
+            print("else")
+            gs, final_estimator = self.gs_with_best_estimator(pipe, grid)
+            self.log("Grid search complete")
+
+            tmp = pd.DataFrame(gs.cv_results_)
+            tmp.to_csv(self._out.format('{}_dim_red.csv'.format(self._details.ds_name)))
+
         self.log("Done")
 
     def perform_cluster(self, dim_param):

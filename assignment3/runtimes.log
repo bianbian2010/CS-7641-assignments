@@ -1,0 +1,51 @@
+2019-03-24 00:40:58,387 - __main__ - INFO - Loading data
+2019-03-24 00:40:58,387 - __main__ - INFO - ----------
+2019-03-24 00:40:58,610 - __main__ - INFO - Running experiments
+2019-03-24 00:40:58,610 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 00:40:58,611 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000001FE07323668>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 00:40:58,611 - __main__ - INFO - Timings: {'PCA': 0}
+2019-03-24 00:47:12,371 - __main__ - INFO - Loading data
+2019-03-24 00:47:12,371 - __main__ - INFO - ----------
+2019-03-24 00:47:12,587 - __main__ - INFO - Running experiments
+2019-03-24 00:47:12,588 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 00:47:12,588 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000001B2B1DB16A0>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 00:47:12,589 - __main__ - INFO - Timings: {'PCA': 0}
+2019-03-24 00:52:48,522 - __main__ - INFO - Loading data
+2019-03-24 00:52:48,522 - __main__ - INFO - ----------
+2019-03-24 00:52:48,740 - __main__ - INFO - Running experiments
+2019-03-24 00:52:48,741 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 00:52:48,742 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x0000028FDD5D26D8>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['logistic'], 'NN__alpha': [0.00031622776601683794], 'NN__hidden_layer_sizes': [(53, 53, 53)], 'NN__learning_rate_init': [0.016]}, threads=-1, seed=13)
+2019-03-24 00:52:49,936 - __main__ - INFO - Timings: {'PCA': 1}
+2019-03-24 00:58:04,508 - __main__ - INFO - Loading data
+2019-03-24 00:58:04,508 - __main__ - INFO - ----------
+2019-03-24 00:58:04,789 - __main__ - INFO - Running experiments
+2019-03-24 00:58:04,789 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 00:58:04,790 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000001EEAFA99FD0>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [0.01], 'NN__hidden_layer_sizes': [(100, 25, 100)], 'NN__learning_rate_init': [0.001]}, threads=-1, seed=13)
+2019-03-24 00:58:05,935 - __main__ - INFO - Timings: {'PCA': 1}
+2019-03-24 01:00:24,190 - __main__ - INFO - Loading data
+2019-03-24 01:00:24,190 - __main__ - INFO - ----------
+2019-03-24 01:00:24,422 - __main__ - INFO - Running experiments
+2019-03-24 01:00:24,423 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:00:24,423 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x0000019C8AF71710>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [0.01], 'NN__hidden_layer_sizes': [(100, 25, 100)], 'NN__learning_rate_init': [0.001]}, threads=-1, seed=13)
+2019-03-24 01:01:21,830 - __main__ - INFO - Loading data
+2019-03-24 01:01:21,830 - __main__ - INFO - ----------
+2019-03-24 01:01:22,090 - __main__ - INFO - Running experiments
+2019-03-24 01:01:22,090 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:01:22,091 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x00000154DEE61748>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'NN__activation': ['relu'], 'NN__alpha': [0.01], 'NN__hidden_layer_sizes': [(100, 25, 100)], 'NN__learning_rate_init': [0.001]}, threads=-1, seed=13)
+2019-03-24 01:03:30,318 - __main__ - INFO - Loading data
+2019-03-24 01:03:30,326 - __main__ - INFO - ----------
+2019-03-24 01:03:30,554 - __main__ - INFO - Running experiments
+2019-03-24 01:03:30,554 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:03:30,555 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002ACEB0BF748>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'activation': ['relu'], 'alpha': [0.01], 'hidden_layer_sizes': [(100, 25, 100)], 'learning_rate_init': [0.001]}, threads=-1, seed=13)
+2019-03-24 01:04:53,790 - __main__ - INFO - Loading data
+2019-03-24 01:04:53,790 - __main__ - INFO - ----------
+2019-03-24 01:04:54,017 - __main__ - INFO - Running experiments
+2019-03-24 01:04:54,017 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:04:54,018 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x000002270C43F6D8>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (100, 25, 100), 'learning_rate_init': 0.001}, threads=-1, seed=13)
+2019-03-24 01:04:55,130 - __main__ - INFO - Timings: {'PCA': 1}
+2019-03-24 01:05:41,124 - __main__ - INFO - Loading data
+2019-03-24 01:05:41,124 - __main__ - INFO - ----------
+2019-03-24 01:05:41,397 - __main__ - INFO - Running experiments
+2019-03-24 01:05:41,398 - __main__ - INFO - Running PCA experiment: Adult (None)
+2019-03-24 01:05:41,398 - __main__ - INFO -  Details: ExperimentDetails(ds=<data.loader.AdultData object at 0x0000021E17611780>, ds_name=adult, ds_readable_name=Adult, best_nn_params={'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (100, 25, 100), 'learning_rate_init': 0.001}, threads=-1, seed=13)
+2019-03-24 01:05:42,698 - __main__ - INFO - Timings: {'PCA': 1}

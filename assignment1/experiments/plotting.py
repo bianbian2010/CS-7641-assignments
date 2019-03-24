@@ -395,3 +395,50 @@ if __name__ == '__main__':
     for reg_file in reg_files:
         clf_name, ds_name = reg_name_regex.search(reg_file).groups()
         read_and_plot_reg_table(reg_file, 'output', clf_name, ds_name)
+
+# Adapted from http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
+def plot_confusion_matrix(cm, classes,
+                          normalize=False,
+                          title='Confusion matrix',
+                          cmap=plt.cm.Blues):
+    """
+    This function prints and plots the confusion matrix.
+    Normalization can be applied by setting `normalize=True`.
+
+    :param cm: The matrix from metrics.confusion_matrics
+    :param classes: The classes for the dataset
+    :param normalize: If true, normalize
+    :param title: The title for the plot
+    :param cmap: The color map to use
+
+    :return: The confusion matrix plot
+    """
+    if normalize:
+        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+        logger.info("Normalized confusion matrix")
+    else:
+        logger.info('Confusion matrix, without normalization')
+
+    logger.info(cm)
+
+    plt.close()
+    plt.figure()
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.title(title)
+    plt.colorbar()
+    tick_marks = np.arange(len(classes))
+    plt.xticks(tick_marks, classes, rotation=45)
+    plt.yticks(tick_marks, classes)
+    plt.tight_layout()
+
+    fmt = '.2f' if normalize else 'd'
+    thresh = cm.max() / 2.
+    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+        plt.text(j, i, format(cm[i, j], fmt),
+                 horizontalalignment="center",
+                 color="white" if cm[i, j] > thresh else "black")
+
+    plt.tight_layout()
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+    return plt
